@@ -6,6 +6,7 @@ import {zodResolver} from '@hookform/resolvers/zod'
 import { LoginSchema } from '../../../schemas'
 import {Input} from '@/components/ui/input'
 import {Button} from '../ui/button'
+import FormError from '../form-error'
 
 import {
 	Form,
@@ -79,6 +80,7 @@ export default function LoginForm(){
 						>
 						</FormField>
 					</div>
+					<FormError message='Invalid credentials!' />
 					<Button
 						type='submit'
 						className='w-full'
